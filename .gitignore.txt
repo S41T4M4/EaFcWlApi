@@ -1,0 +1,32 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Oo]bj/
+[Bb]in/
+[Aa]ssets/
+
+# Visual Studio files
+.vs/
+*.sln
+*.user
+*.userosscache
+*.suo
+
+# Rider files
+.idea/
+
+# Logs
+*.log
+
+# User secrets
+secrets.json
+
+# npm packages
+node_modules/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+**/packages/*

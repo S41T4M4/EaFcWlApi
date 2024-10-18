@@ -1,0 +1,6 @@
+@WLFCApi_HostAddress = http://localhost:5076
+
+GET {{WLFCApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

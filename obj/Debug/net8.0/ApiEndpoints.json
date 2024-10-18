@@ -1,0 +1,239 @@
+[
+  {
+    "ContainingType": "WLFCApi.Controllers.JogadorController",
+    "Method": "DeleteJogador",
+    "RelativePath": "deleteJogador",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
+    "Method": "GetAllEstatisticas",
+    "RelativePath": "estatisticasWl/getAllEstatistica",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
+    "Method": "GetEstatisticasById",
+    "RelativePath": "estatisticasWl/getEstatisticasById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
+    "Method": "AddNewEstatistica",
+    "RelativePath": "estatisticasWl/novaEstatistica",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estatisticasJogadorWL",
+        "Type": "WLFCApi.ViewModel.EstatisticasJogadorWlViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
+    "Method": "UpdateEstatisticas",
+    "RelativePath": "estatisticasWl/UpdateEstatisticas",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "estatisticasJogadorWL",
+        "Type": "WLFCApi.ViewModel.EstatisticasJogadorWlViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.JogadorController",
+    "Method": "GetAllJogadores",
+    "RelativePath": "getAllJogadores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.JogadorController",
+    "Method": "GetJogadorById",
+    "RelativePath": "getJogadorById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.JogadorController",
+    "Method": "AddNewJogador",
+    "RelativePath": "newJogador",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jogadorViewModel",
+        "Type": "WLFCApi.ViewModel.JogadorViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.JogadorController",
+    "Method": "UpdateJogador",
+    "RelativePath": "updateJogador/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "jogador",
+        "Type": "WLFCApi.ViewModel.JogadorViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
+    "Method": "DeleteWl",
+    "RelativePath": "wl/deleteWl",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
+    "Method": "UpdateWl",
+    "RelativePath": "wl/editWl",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "wlViewModel",
+        "Type": "WLFCApi.ViewModel.WeekendLeagueViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
+    "Method": "GetAllWls",
+    "RelativePath": "wl/getAllWls",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
+    "Method": "FindWlByID",
+    "RelativePath": "wl/getWlById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
+    "Method": "CreateNewWl",
+    "RelativePath": "wl/newWl",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wlView",
+        "Type": "WLFCApi.ViewModel.WeekendLeagueViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
+    "Method": "GetWlByVitorias",
+    "RelativePath": "wl/wlByVitorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vitorias",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
