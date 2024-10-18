@@ -65,5 +65,10 @@ namespace WLFCApi.Infraestrutura.Repositories
 
 
         }
+
+        public List<Jogador> GetJogadorByNome(string nome)
+        {
+            return _connectionContext.Jogador.Where(j => j.nome.ToLower() == nome.ToLower()).ToList();
+        }
     }
 }

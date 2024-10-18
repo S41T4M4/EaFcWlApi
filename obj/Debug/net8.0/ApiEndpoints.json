@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
+    "Method": "DeleteEstatisticas",
+    "RelativePath": "estatisticasWl/deleteJogador",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
     "Method": "GetAllEstatisticas",
     "RelativePath": "estatisticasWl/getAllEstatistica",
     "HttpMethod": "GET",
@@ -99,6 +115,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.JogadorController",
+    "Method": "GetJogador",
+    "RelativePath": "getJogadorByNome",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

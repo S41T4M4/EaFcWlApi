@@ -84,6 +84,12 @@ namespace WLFCApi.Controllers
                 throw new Exception("Não existe o jogador");
             }
         }
-        
+        [HttpGet("getJogadorByNome")]
+        public IActionResult GetJogador(string nome)
+        {
+            var jogadorExistente = _jogadorRepository.GetJogadorByNome(nome);
+            return Ok(jogadorExistente);
+        }
+
     }
 }

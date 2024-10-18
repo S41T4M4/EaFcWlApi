@@ -41,3 +41,4 @@ C:\Users\ibrai\source\repos\WLFCApi\WLFCApi\obj\Debug\net8.0\refint\WLFCApi.dll
 C:\Users\ibrai\source\repos\WLFCApi\WLFCApi\obj\Debug\net8.0\WLFCApi.pdb
 C:\Users\ibrai\source\repos\WLFCApi\WLFCApi\obj\Debug\net8.0\WLFCApi.genruntimeconfig.cache
 C:\Users\ibrai\source\repos\WLFCApi\WLFCApi\obj\Debug\net8.0\ref\WLFCApi.dll
+C:\Users\ibrai\source\repos\WLFCApi\WLFCApi\obj\Debug\net8.0\WLFCApi.sourcelink.json

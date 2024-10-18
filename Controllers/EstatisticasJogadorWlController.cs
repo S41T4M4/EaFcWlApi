@@ -61,5 +61,19 @@ namespace WLFCApi.Controllers
             return Ok(estatisticas);
 
         }
+        [HttpDelete("deleteJogador")]
+        public IActionResult DeleteEstatisticas(int id)
+        {
+            var estatistica = _repository.GetEstatisticaById(id);
+            if (estatistica != null)
+            {
+                _repository.AddNewEstatisticas(estatistica);
+                return Ok();
+            }
+            else
+            {
+                throw new Exception("Não existe essa estatistica");
+            }
+        }
     }
 }
