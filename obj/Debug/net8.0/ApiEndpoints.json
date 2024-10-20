@@ -222,6 +222,22 @@
   },
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
+    "Method": "GetWlByData",
+    "RelativePath": "wl/getWlByData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "FindWlByID",
     "RelativePath": "wl/getWlById",
     "HttpMethod": "GET",
@@ -230,6 +246,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
+    "Method": "GetWlByRank3",
+    "RelativePath": "wl/getWlByRankIII",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vitorias",
         "Type": "System.Int32",
         "IsRequired": false
       }

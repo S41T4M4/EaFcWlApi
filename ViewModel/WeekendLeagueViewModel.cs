@@ -14,5 +14,7 @@
 
         public int GolsSofridos { get; set; }
 
+        public string Date { get; set; }
+
     }
 }

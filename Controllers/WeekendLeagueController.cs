@@ -25,6 +25,7 @@ namespace WLFCApi.Controllers
                 derrotas = wlView.Derrotas,
                 gols_marcados = wlView.GolsMarcados,
                 gols_sofridos = wlView.GolsSofridos,
+                data = wlView.Date
 
             };
             _weekendLeagueRepository.NewEstatisticasWl(newWl);
@@ -49,6 +50,7 @@ namespace WLFCApi.Controllers
             wlExisting.derrotas = wlViewModel.Derrotas;
             wlExisting.gols_marcados = wlViewModel.GolsMarcados;
             wlExisting.gols_sofridos = wlViewModel.GolsSofridos;
+            wlExisting.data = wlViewModel.Date;
 
             _weekendLeagueRepository.UpdateWl(wlExisting);
             return Ok("Os dados foram salvos !");
@@ -80,7 +82,52 @@ namespace WLFCApi.Controllers
             var wlExisting = _weekendLeagueRepository.GetWlByVitorias(vitorias);
             return Ok(wlExisting);
         }
+        [HttpGet("getWlByData")]
+        public IActionResult GetWlByData(string data)
+        {
+            var wlByData = _weekendLeagueRepository.GetWlByDate(data);
+            if (wlByData != null)
+            {
+                return Ok(wlByData);
+            }
+            else
+            {
+                throw new Exception($"Could not find {data}");
+            }
+        }
+        [HttpGet("getWlByRank")]
+        public IActionResult GetWlByRank3(int vitorias)
+        {
+            var rank = _weekendLeagueRepository.GetWlByRank(vitorias);
 
+
+            if (vitorias == 11)
+            {
+
+                var numeroWl = rank.Select(wl => $"Weekend League #{wl.numero_wl} você conseguiu rank III").ToList();
+                return Ok(numeroWl);
+            }
+
+            if (vitorias == 10 || vitorias == 9)
+            {
+                var numeroWl = rank.Select(wl => $"Weekend League #{wl.numero_wl} você conseguiu Rank II").ToList();
+                return Ok(numeroWl);
+            }
+
+
+            if (vitorias == 13)
+            {
+                var numeroWl = rank.Select(wl => $"Weekend League #{wl.numero_wl} você conseguiu rank II").ToList();
+                return Ok(numeroWl);
+            }
+            else
+            {
+                throw new Exception("Não existe");
+            }
+
+
+        }
 
     }
 }
+

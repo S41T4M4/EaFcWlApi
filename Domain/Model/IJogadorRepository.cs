@@ -7,6 +7,7 @@
         Jogador GetJogadorById(int id);
         void UpdateJogador(Jogador jogador);
         void DeleteJogador(int id);
-        List<Jogador> GetJogadorByNome(string nome);  
+        List<Jogador> GetJogadorByNome(string nome);
+        
     }
 }

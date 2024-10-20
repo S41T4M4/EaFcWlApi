@@ -90,6 +90,7 @@ namespace WLFCApi.Controllers
             var jogadorExistente = _jogadorRepository.GetJogadorByNome(nome);
             return Ok(jogadorExistente);
         }
+       
 
     }
 }

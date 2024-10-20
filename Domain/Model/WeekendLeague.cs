@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WLFCApi.Domain.Model
@@ -19,5 +20,7 @@ namespace WLFCApi.Domain.Model
 
         public int gols_sofridos { get; set; }
 
+        // Adicionando o campo "data" no model
+        public string data { get; set; }
     }
 }
