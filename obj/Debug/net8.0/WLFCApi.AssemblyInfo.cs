@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WLFCApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02a7c9cdbd6f27ef54c463260e870d1af925851f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91ebc2b82542215bf7f2326f4ab8c7a9f54ad404")]
 [assembly: System.Reflection.AssemblyProductAttribute("WLFCApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WLFCApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

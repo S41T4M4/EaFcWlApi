@@ -17,6 +17,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IJogadorRepository, JogadorRepository>();
 builder.Services.AddTransient<IEstatisticasJogadorWlRepository, EstatisticasJogadorWlRepository>();
 builder.Services.AddTransient<IWeekendLeagueRepository, WeekendLeagueRepository>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        name: "MyPolicy",
+        policy =>
+        {
+            policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        }
+    );
+});
 var app = builder.Build();
 
 
@@ -25,6 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("MyPolicy");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

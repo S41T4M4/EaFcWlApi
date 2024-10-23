@@ -9,5 +9,6 @@
         void DeleteJogador(int id);
         List<Jogador> GetJogadorByNome(string nome);
         
+
     }
 }

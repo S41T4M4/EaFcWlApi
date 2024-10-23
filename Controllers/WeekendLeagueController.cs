@@ -5,7 +5,7 @@ using WLFCApi.ViewModel;
 namespace WLFCApi.Controllers
 {
     [ApiController]
-    [Route("wl")]
+    [Route("api/weekendLeague")]
     public class WeekendLeagueController : ControllerBase
     {
         private readonly IWeekendLeagueRepository _weekendLeagueRepository;

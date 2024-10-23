@@ -5,7 +5,7 @@ using WLFCApi.ViewModel;
 namespace WLFCApi.Controllers
 {
     [ApiController]
-    [Route("/")]
+    [Route("api/jogador")]
     public class JogadorController : ControllerBase
     {
         private readonly IJogadorRepository _jogadorRepository;

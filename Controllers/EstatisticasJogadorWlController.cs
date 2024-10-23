@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WLFCApi.Domain.Model;
+using WLFCApi.Infraestrutura.Repositories;
 using WLFCApi.ViewModel;
 
 namespace WLFCApi.Controllers
 {
     [ApiController]
-    [Route("estatisticasWl")]
+    [Route("api/estatisticas")]
     public class EstatisticasJogadorWlController : ControllerBase
     {
         private readonly IEstatisticasJogadorWlRepository _repository;
@@ -21,7 +22,7 @@ namespace WLFCApi.Controllers
             {
                 id_estatistica = estatisticasJogadorWL.IdEstatistica,
                 id_jogador = estatisticasJogadorWL.IdJogador,
-                id_wl = estatisticasJogadorWL.IdEstatistica,
+                id_wl = estatisticasJogadorWL.IdWL,
                 numero_partida = estatisticasJogadorWL.NumeroPartida,
                 gols = estatisticasJogadorWL.Gols,
                 assistencias = estatisticasJogadorWL.Assistencias,
@@ -61,7 +62,7 @@ namespace WLFCApi.Controllers
             return Ok(estatisticas);
 
         }
-        [HttpDelete("deleteJogador")]
+        [HttpDelete("deleteEstatisticas")]
         public IActionResult DeleteEstatisticas(int id)
         {
             var estatistica = _repository.GetEstatisticaById(id);
@@ -75,5 +76,38 @@ namespace WLFCApi.Controllers
                 throw new Exception("Não existe essa estatistica");
             }
         }
+        [HttpGet("getJogadoresPorWl/{idWl}")]
+        public IActionResult GetJogadoresPorWl(int idWl)
+        {
+            var estatisticasJogadores = _repository.GetEstatisticasJogadoresPorWl(idWl);
+
+            if (estatisticasJogadores == null || estatisticasJogadores.Count == 0)
+            {
+                return NotFound("Nenhum jogador encontrado para esta WL.");
+            }
+
+            // Retorna apenas os jogadores com suas estatísticas
+            var jogadoresComEstatisticas = estatisticasJogadores.Select(e => new
+            {
+                
+                nomeJogador = e.Jogador.nome,
+                posicao = e.Jogador.posicao,
+                overall = e.Jogador.overall,
+                gols = e.gols,
+                assistencias = e.assistencias,
+                weekendLeague = new
+                {
+                    numeroWl = e.WeekendLeague.numero_wl,
+                    data = e.WeekendLeague.data,  // Supondo que tenha uma data na entidade WeekendLeague
+                    vitorias = e.WeekendLeague.vitorias,
+                    derrotas = e.WeekendLeague.derrotas
+                }
+
+            }).ToList();
+
+            return Ok(jogadoresComEstatisticas);
+        }
+
+
     }
 }

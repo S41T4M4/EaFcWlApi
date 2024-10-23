@@ -1,24 +1,8 @@
 [
   {
-    "ContainingType": "WLFCApi.Controllers.JogadorController",
-    "Method": "DeleteJogador",
-    "RelativePath": "deleteJogador",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
     "Method": "DeleteEstatisticas",
-    "RelativePath": "estatisticasWl/deleteJogador",
+    "RelativePath": "api/estatisticas/deleteEstatisticas",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -34,7 +18,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
     "Method": "GetAllEstatisticas",
-    "RelativePath": "estatisticasWl/getAllEstatistica",
+    "RelativePath": "api/estatisticas/getAllEstatistica",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +28,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
     "Method": "GetEstatisticasById",
-    "RelativePath": "estatisticasWl/getEstatisticasById",
+    "RelativePath": "api/estatisticas/getEstatisticasById",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -59,8 +43,24 @@
   },
   {
     "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
+    "Method": "GetJogadoresPorWl",
+    "RelativePath": "api/estatisticas/getJogadoresPorWl/{idWl}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idWl",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
     "Method": "AddNewEstatistica",
-    "RelativePath": "estatisticasWl/novaEstatistica",
+    "RelativePath": "api/estatisticas/novaEstatistica",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -76,7 +76,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.EstatisticasJogadorWlController",
     "Method": "UpdateEstatisticas",
-    "RelativePath": "estatisticasWl/UpdateEstatisticas",
+    "RelativePath": "api/estatisticas/UpdateEstatisticas",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -96,8 +96,24 @@
   },
   {
     "ContainingType": "WLFCApi.Controllers.JogadorController",
+    "Method": "DeleteJogador",
+    "RelativePath": "api/jogador/deleteJogador",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WLFCApi.Controllers.JogadorController",
     "Method": "GetAllJogadores",
-    "RelativePath": "getAllJogadores",
+    "RelativePath": "api/jogador/getAllJogadores",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -107,7 +123,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.JogadorController",
     "Method": "GetJogadorById",
-    "RelativePath": "getJogadorById",
+    "RelativePath": "api/jogador/getJogadorById",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -123,7 +139,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.JogadorController",
     "Method": "GetJogador",
-    "RelativePath": "getJogadorByNome",
+    "RelativePath": "api/jogador/getJogadorByNome",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -139,7 +155,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.JogadorController",
     "Method": "AddNewJogador",
-    "RelativePath": "newJogador",
+    "RelativePath": "api/jogador/newJogador",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -155,7 +171,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.JogadorController",
     "Method": "UpdateJogador",
-    "RelativePath": "updateJogador/{id}",
+    "RelativePath": "api/jogador/updateJogador/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -176,7 +192,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "DeleteWl",
-    "RelativePath": "wl/deleteWl",
+    "RelativePath": "api/weekendLeague/deleteWl",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -192,7 +208,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "UpdateWl",
-    "RelativePath": "wl/editWl",
+    "RelativePath": "api/weekendLeague/editWl",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -213,7 +229,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "GetAllWls",
-    "RelativePath": "wl/getAllWls",
+    "RelativePath": "api/weekendLeague/getAllWls",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -223,7 +239,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "GetWlByData",
-    "RelativePath": "wl/getWlByData",
+    "RelativePath": "api/weekendLeague/getWlByData",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -239,7 +255,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "FindWlByID",
-    "RelativePath": "wl/getWlById",
+    "RelativePath": "api/weekendLeague/getWlById",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -255,7 +271,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "GetWlByRank3",
-    "RelativePath": "wl/getWlByRankIII",
+    "RelativePath": "api/weekendLeague/getWlByRank",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -271,7 +287,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "CreateNewWl",
-    "RelativePath": "wl/newWl",
+    "RelativePath": "api/weekendLeague/newWl",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -287,7 +303,7 @@
   {
     "ContainingType": "WLFCApi.Controllers.WeekendLeagueController",
     "Method": "GetWlByVitorias",
-    "RelativePath": "wl/wlByVitorias",
+    "RelativePath": "api/weekendLeague/wlByVitorias",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

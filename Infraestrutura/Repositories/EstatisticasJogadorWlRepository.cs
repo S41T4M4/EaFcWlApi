@@ -1,4 +1,5 @@
-﻿using WLFCApi.Domain.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using WLFCApi.Domain.Model;
 
 namespace WLFCApi.Infraestrutura.Repositories
 {
@@ -38,6 +39,24 @@ namespace WLFCApi.Infraestrutura.Repositories
         {
            
             return _connectionContext.EstatisticasJogadorWl.Find(id);
+        }
+
+        public List<EstatisticasJogadorWL> GetEstatisticasJogadoresPorWl(int idWl)
+        {
+            return _connectionContext.EstatisticasJogadorWl
+            .Include(e => e.Jogador) // Inclui as informações do jogador
+            .Include(e => e.WeekendLeague)
+            .Where(e => e.id_wl == idWl) // Filtra pela WL
+            .ToList();
+        }
+
+        public List<EstatisticasJogadorWL> GetUltimasEstatisticas()
+        {
+            // Obtém o maior id_wl (última Weekend League)
+            var lastWl = _connectionContext.EstatisticasJogadorWl.Max(e => e.id_wl);
+
+            // Retorna as estatísticas associadas à última Weekend League
+            return _connectionContext.EstatisticasJogadorWl.Where(e => e.id_wl == lastWl).ToList();
         }
 
         public void UpdateEstatisticas(EstatisticasJogadorWL stats)

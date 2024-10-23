@@ -7,5 +7,7 @@
         EstatisticasJogadorWL GetEstatisticaById(int id);
         void UpdateEstatisticas(EstatisticasJogadorWL stats);
         void DeleteEstatisticas(int id);
+        List<EstatisticasJogadorWL> GetEstatisticasJogadoresPorWl(int idWl);
+        List<EstatisticasJogadorWL> GetUltimasEstatisticas();
     }
 }

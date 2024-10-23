@@ -14,6 +14,7 @@ namespace WLFCApi.Domain.Model
         public bool negociavel { get; set; }
 
         public string posicao { get; set; }
+
         public int overall { get; set; }
 
 
