@@ -44,18 +44,18 @@ namespace WLFCApi.Infraestrutura.Repositories
         public List<EstatisticasJogadorWL> GetEstatisticasJogadoresPorWl(int idWl)
         {
             return _connectionContext.EstatisticasJogadorWl
-            .Include(e => e.Jogador) // Inclui as informações do jogador
+            .Include(e => e.Jogador) 
             .Include(e => e.WeekendLeague)
-            .Where(e => e.id_wl == idWl) // Filtra pela WL
+            .Where(e => e.id_wl == idWl) 
             .ToList();
         }
 
         public List<EstatisticasJogadorWL> GetUltimasEstatisticas()
         {
-            // Obtém o maior id_wl (última Weekend League)
+            
             var lastWl = _connectionContext.EstatisticasJogadorWl.Max(e => e.id_wl);
 
-            // Retorna as estatísticas associadas à última Weekend League
+            
             return _connectionContext.EstatisticasJogadorWl.Where(e => e.id_wl == lastWl).ToList();
         }
 
